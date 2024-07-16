@@ -97,7 +97,7 @@ A Python script for converting Jupyter notebooks, with authentication for restri
             print("Downloading dependecies...")
             subprocess.run(['pip', 'install', '-q', 'nbconvert'])
             if output_format == 'pdf':
-                subprocess.run(['apt-get', 'install', '-y', '-qq', 'texlive-xetex', 'texlive-fonts-recommended', 'texlive-plain-generic'])
+                subprocess.run(['apt-get', 'install', '-y', '-qq', 'texlive-xetex', 'texlive-fonts-recommended', 'texlive-plain-generic', 'pandoc'])
 
             converted_path = convert_notebook(output_format)
 
